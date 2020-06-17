@@ -21,10 +21,27 @@ def multiply_string(message, n):
 
 
 if __name__ == '__main__':
-    try:
-        message = input('Please enter a String you would like repeated: ')
-        n = int(input('How many times do you want to see it repeated? '))
-    except ValueError as err:
-        print("ValueError found!!")
-    else:
-        print(multiply_string(message, n))
+    while True:
+        try:
+            message = input('Please enter a word you would like repeated: ')
+            if message.isalpha():
+                break
+            else:
+                raise TypeError
+        except TypeError:
+            print('Letters only please.')
+            continue
+
+    while True:
+        n = input('How many times do you want to see it repeated? ')
+        try:
+            n = int(n)
+            if n < 0:
+                print('Negative numbers not allowed.')
+                continue
+            break
+        except ValueError:
+            print('Numbers only, please.')
+            continue
+
+    print(multiply_string(message, n))
