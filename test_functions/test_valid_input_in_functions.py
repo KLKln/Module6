@@ -6,10 +6,10 @@ class MyTestCase(unittest.TestCase):
 
     #self.assertEqual('HarHarHar', str_funcs.multiply_string('Har', 3))
     def test_score_input_test_name(self):
-        self.assertEqual('Python Quiz: 0', validate.score_input('Python Quiz'+': 0'))
+        self.assertEqual('Python Quiz: 0', validate.score_input('Python Quiz'))
 
     def test_score_input_test_score_valid(self):
-        self.assertEqual(validate.score_input(test_score=self) == int)
+        self.assertEqual('SQL Quiz: 89', validate.score_input('SQL Quiz', 89))
 
     def test_score_input_test_score_below_range(self):
         self.assertTrue(validate.score_input(test_score=self) >= 0)

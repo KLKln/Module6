@@ -21,8 +21,9 @@ raises keyError: raises an exception
     except KeyError:
         print("invalid_message is:", invalid_message)
 
+    test = (test_name + ':' + " " + str(test_score))
     # return { test_name: test_score}
-    return test_name #+':', test_score
+    return test
 
 
 if __name__ == '__main__':
