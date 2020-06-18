@@ -11,28 +11,19 @@ def score_input(test_name, test_score=0, invalid_message='Invalid test score, tr
 Use reST style.
 :param test_name: input for name of test
 :param test_score: score the student got on test
-:param invalid_message:
+:param invalid_message:"invalid test score, try again!"
 :return: test_name, test_score
 raises keyError: raises an exception
 """
+    try:
+        print("test_name is:", test_name)
+        print("test_score is: ", test_score)
+    except KeyError:
+        print("invalid_message is:", invalid_message)
 
-    while True:
-        test = input(test_name)
-        test_name = test
+    # return { test_name: test_score}
+    return test_name #+':', test_score
 
-
-        #test_score = int(input('please enter test score: '))
-        #if 0 <= test_score <= 100:
-            #return true
-        #if 0 > test_score > 100:
-            #return false
-            #print(invalid_message)
-        #break
-
-
-    return
-    #{test, test_score}
-    pass
 
 if __name__ == '__main__':
     pass
