@@ -15,15 +15,20 @@ Use reST style.
 :return: test_name, test_score
 raises keyError: raises an exception
 """
-    try:
+    while True:
+
         print("test_name is:", test_name)
         print("test_score is: ", test_score)
-    except KeyError:
         print("invalid_message is:", invalid_message)
 
-    test = (test_name + ':' + " " + str(test_score))
+        if test_score < 0:
+            return False
+            raise ValueError(invalid_message)
+        else:
+            test = (test_name + ':' + " " + str(test_score))
+
     # return { test_name: test_score}
-    return test
+        return test
 
 
 if __name__ == '__main__':
