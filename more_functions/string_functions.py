@@ -6,6 +6,7 @@ This program will take a String and a number and repeat
     the string n number of times.
 """
 
+
 def multiply_string(message, n):
     """
     Use reST style.
