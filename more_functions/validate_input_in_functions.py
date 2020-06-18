@@ -16,5 +16,23 @@ Use reST style.
 raises keyError: raises an exception
 """
 
+    while True:
+        test = input(test_name)
+        test_name = test
+
+
+        #test_score = int(input('please enter test score: '))
+        #if 0 <= test_score <= 100:
+            #return true
+        #if 0 > test_score > 100:
+            #return false
+            #print(invalid_message)
+        #break
+
+
     return
+    #{test, test_score}
+    pass
+
+if __name__ == '__main__':
     pass

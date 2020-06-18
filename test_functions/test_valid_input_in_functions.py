@@ -4,18 +4,19 @@ from more_functions import validate_input_in_functions as validate
 
 class MyTestCase(unittest.TestCase):
 
+    #self.assertEqual('HarHarHar', str_funcs.multiply_string('Har', 3))
     def test_score_input_test_name(self):
 
-        self.assertEqual('Kelly test 1', validate.score_input('Kelly test 1'))
+        self.assertEqual('Kelly test 1', validate.score_input('Kelly test 1', 0))
 
     def test_score_input_test_score_valid(self):
-        self.assertEqual('Kelly test 2', 95, validate.score_input('Kelly test 2', 95))
+        self.assertTrue(validate.score_input(test_score=self) == int)
 
     def test_score_input_test_score_below_range(self):
-        self.assertTrue(validate.score_input.test_score >= 0)
+        self.assertTrue(validate.score_input(test_score=self) >= 0)
 
     def test_score_input_test_score_above_range(self):
-        self.assertTrue(validate.score_input.test_score <= 100)
+        self.assertTrue(validate.score_input(test_score=self) <= 100)
 
 
     def test_test_score_non_numeric(self):
