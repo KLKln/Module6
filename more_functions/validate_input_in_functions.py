@@ -23,7 +23,8 @@ raises keyError: raises an exception
 
         if test_score < 0:
             return False
-            raise ValueError(invalid_message)
+        elif test_score > 100:
+            return False
         else:
             test = (test_name + ':' + " " + str(test_score))
 
