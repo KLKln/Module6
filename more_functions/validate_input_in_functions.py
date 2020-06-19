@@ -17,13 +17,16 @@ raises keyError: raises an exception
 """
     while True:
 
-        print("test_name is:", test_name)
-        print("test_score is: ", test_score)
-        print("invalid_message is:", invalid_message)
+        try:
+            print("test_name is:", test_name)
+            print("test_score is: ", test_score)
+            print("invalid_message is:", invalid_message)
+        except ValueError:
+            raise ValueError(invalid_message)
 
-        if test_score < 0:
+        if int(test_score) < 0:
             return False
-        elif test_score > 100:
+        elif int(test_score) > 100:
             return False
         else:
             test = (test_name + ':' + " " + str(test_score))

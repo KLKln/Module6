@@ -17,9 +17,8 @@ class MyTestCase(unittest.TestCase):
     def test_score_input_test_score_above_range(self):
         self.assertEqual(False, validate.score_input('SQL Quiz', 199))
 
-
     def test_test_score_non_numeric(self):
-        assert type(self) == int, 'Invalid test score, try again!'
+        self.assertEqual(False, validate.score_input('SQL Quiz', 'lol'))
 
 
 if __name__ == '__main__':
